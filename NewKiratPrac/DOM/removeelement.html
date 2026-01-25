@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parentNode">
+        <div id="todo-1">
+            <h4>take class </h4>
+            <button onclick="removeElment(1)">Delet Item</button>
+        </div>
+        <div id="todo-2">
+            <h4>go to gym</h4>
+            <button onclick="removeElment(2)">Delet Item</button>
+        </div>
+        <div id="todo-add">
+            <h4></h4>
+            <input type="text" name="" id="">
+            <button onclick="addElement()">add Item</button>
+        </div>
+    </div>
+    <script>
+        function removeElment(index){
+            const element = document.querySelector("#todo-"+index)
+            element.parentNode.removeChild(element)
+        }
+
+        function addElement(){
+            const inputElement = document.querySelector("input")
+            const createNodeEl = document.createElement("div")
+            const removeChild = document.createElement("button")
+            const h4el = document.createElement("h4")
+            h4el.innerHTML = inputElement.value
+            createNodeEl.appendChild(h4el)
+            createNodeEl.appendChild(removeChild)
+            document.querySelector("#parentNode").appendChild(createNodeEl)
+
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 const {subtraction,addtion,multiplication} =  require('./calculate.js');
-//{subtraction,addtion,multiplication} => this is know as destructure 
+// {subtraction,addtion,multiplication} => this is know as destructure 
+
 
 var a = 10 ;
 var b = 20;

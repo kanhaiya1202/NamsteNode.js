@@ -2,8 +2,6 @@ const fs = require('fs');
 
 console.log("hii there")// 1
 
-
-
 function timeout (){
     console.log("callback is done !")// call back fuction also waiting for complete tack for loop function
 }
@@ -19,8 +17,12 @@ function read(err,data){
 fs.readFile("a.txt","utf8", read)
 
 let c = 0
+
 for (let i = 0;  i< 1000000; i++){
     c= c+1;
+    if(c== 100000){
+        console.log("c done");
+    }
 }
 
 console.log("Exsicuted task is done!")

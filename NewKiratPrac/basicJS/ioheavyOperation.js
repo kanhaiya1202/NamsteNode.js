@@ -9,7 +9,6 @@ function read (err, data){
 
 fs.readFile("a.txt", "utf8",read);
 fs.readFile('b.txt', 'utf-8', read);
-
 console.log("done");
 
 setTimeout(()=>{
